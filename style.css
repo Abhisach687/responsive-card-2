@@ -1,5 +1,12 @@
+:root {
+  --white: #fff;
+  --background-color: #343d33;
+  --font-libre: "Libre Baskerville", serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
 body {
-  background-color: #343d33;
+  background-color: var(--background-color);
 }
 
 .top {
@@ -8,37 +15,38 @@ body {
   margin-top: 40px;
 }
 
-.top h1 {
+.top h1,
+.bottom h1 {
   width: 26.0625rem;
-  color: var(--white, #fff);
-  /* text/large title */
-  font-family: Libre Baskerville;
+  color: var(--white);
+  font-family: var(--font-libre);
   font-size: 2.8125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%; /* 3.09375rem */
+  line-height: 110%;
   text-transform: capitalize;
 }
 
-.top p {
+.top p,
+.bottom p {
   width: 25.0625rem;
-  color: var(--white, #fff);
-  /* text/default body */
-  font-family: Roboto;
+  color: var(--white);
+  font-family: var(--font-roboto);
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 1.875rem */
+  line-height: 150%;
 }
 
-.top button {
+.top button,
+.bottom button {
   display: inline-flex;
   padding: 1.25rem 2.5rem;
   align-items: center;
   gap: 0.625rem;
-  border: 2px solid var(--white, #fff);
-  background-color: #343d33;
-  color: #fff;
+  border: 2px solid var(--white);
+  background-color: var(--background-color);
+  color: var(--white);
 }
 
 .bottom {
@@ -64,63 +72,27 @@ body {
   }
 
   .bottom {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 28px;
   }
 
-  .bottom .textbox2 {
+  .bottom .textbox2,
+  .bottom img {
     margin-left: 112px;
   }
 
   .bottom img {
     width: 538px;
-    margin-left: 112px;
-  }
-
-  .bottom h1 {
-    width: 26.0625rem;
-    color: var(--white, #fff);
-    /* text/large title */
-    font-family: Libre Baskerville;
-    font-size: 2.8125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110%; /* 3.09375rem */
-    text-transform: capitalize;
-  }
-
-  .bottom p {
-    width: 25.0625rem;
-    color: var(--white, #fff);
-    /* text/default body */
-    font-family: Roboto;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 1.875rem */
-  }
-
-  .bottom button {
-    display: inline-flex;
-    padding: 1.25rem 2.5rem;
-    align-items: center;
-    gap: 0.625rem;
-    border: 2px solid var(--white, #fff);
-    background-color: #343d33;
-    color: #fff;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  .top img {
-    width: 400px;
-  }
-
+  .top img,
   .bottom img {
-    margin-left: 36px;
     width: 400px;
   }
 
+  .bottom img,
   .bottom .textbox2 {
     margin-left: 36px;
   }
