@@ -49,6 +49,11 @@ body {
   color: var(--white);
 }
 
+.top button:hover,
+.bottom button:hover {
+  cursor: pointer;
+}
+
 .bottom {
   margin-left: 248px;
   margin-top: 50px;
